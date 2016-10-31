@@ -1,0 +1,178 @@
+<div class="container-fluid" style="margin-top:40px">
+
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="container-fluid">
+                    <h3 class="component_header">Update Information</h3>
+                    <div class="col-xs-8 info_input">
+                        <h5 class="component_sec_title">Organization Name</h5>
+                        <input type="text" class="form-control info_txt_box" value="Takhasosy el monaseb" ng-model="profileCtrl.loginUser.Name" >
+                        <span class="hint_txt">max 30 characters</span>
+
+                    </div>
+                    <div class="col-xs-8 info_input">
+                        <h5 class="component_sec_title">Specialization</h5>
+                        <input type="text" class="form-control info_txt_box" value="Catering"   ng-model="profileCtrl.loginUser.Industry" >
+                        <span class="hint_txt">max 30 characters</span>
+
+                    </div>
+                    <div class="col-xs-5 info_input">
+                        <h5 class="component_sec_title">Type</h5>
+                        <select class="info_txt_box">
+                            <option>Startup</option>
+                            <option>Vendor</option>
+                        </select>
+                    </div>
+
+                   
+                </div>
+                <div class="container-fluid">
+                    <h3 class="component_header">Update Biography</h3>
+                    <div class="info_input">
+                        <textarea class="info_txt_box" ng-model="profileCtrl.loginUser.About"></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-default save_btn" ng-click="profileCtrl.updateWorkAndEducation()">Save</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="container-fluid">
+                    <div class="profile_pic_div">
+                        <h3 class="component_header photo_title">Change Photo</h3>
+                        <div class="photo_container">
+                            <img ng-src='{{profileCtrl.profilePic}}' />
+
+                        </div>
+                        <button type="button" class="btn btn-default browse_btn">Browse</button>
+                        <button type="button" class="btn btn-default save_btn">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="container-fluid">
+                    <h3 class="component_header">Update Interest</h3>
+                    <h5 class="component_header">Add another interest</h5>
+                    <select class="info_txt_box interest_select">
+                        <option>Choose from below..</option>
+                        <option>Art</option>
+                        <option>Music</option>
+                    </select>
+                    <div class="interest">
+                        <div class="tag">
+                            <span class="tag_name">Photography</span>
+                            <a href="javascript:void(0)" class="close_tag">X</a>
+                        </div>
+                        <textarea class="info_txt_box tag_textarea">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                    </div>
+                    <div class="interest">
+                        <div class="tag">
+                            <span class="tag_name">Parenting</span>
+                            <a href="javascript:void(0)" class="close_tag">X</a>
+                        </div>
+                        <textarea class="info_txt_box tag_textarea">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                    </div>
+                    <div class="interest">
+                        <div class="tag">
+                            <span class="tag_name">Catering</span>
+                            <a href="javascript:void(0)" class="close_tag">X</a>
+                        </div>
+                        <textarea class="info_txt_box tag_textarea">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                    </div>
+                    <div class="interest">
+                        <div class="tag">
+                            <span class="tag_name">Art</span>
+                            <a href="javascript:void(0)" class="close_tag">X</a>
+                        </div>
+                        <textarea class="info_txt_box tag_textarea">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                    </div>
+                    <button type="button" class="btn btn-default save_btn">Save</button>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="container-fluid">
+                    <h3 class="component_header">Update Contacts</h3>
+                    <h5 class="component_sec_title">Mobile</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.Phone" />
+                    <span class="hint_txt">max 30 characters</span>
+
+                    <br />
+                    <input type="checkbox" id="c1"  ng-model="profileCtrl.loginUser.PhoneViewable" />
+                    <label for="c1"><span></span> Show mobile by request</label>
+
+                    <h5 class="component_sec_title">Fax</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.Fax" />
+                    <span class="hint_txt">max 30 characters</span>
+
+                    <br />
+                    <input type="checkbox" id="c1" ng-model="profileCtrl.loginUser.FaxViewable" />
+                    <label for="c1"><span></span> Show fax by request</label>
+                    <button type="button" class="btn btn-default save_btn" ng-click="profileCtrl.updateWorkAndEducation()" >Save</button>
+
+
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="container-fluid">
+                    <h3 class="component_header">Update Social Media</h3>
+
+                    <h5 class="component_sec_title">Blog</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Blog" />
+
+                    <h5 class="component_sec_title">About Me</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.AboutMe " />
+
+                    <h5 class="component_sec_title">Instgram</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Instagram"/>
+
+                    <h5 class="component_sec_title">Pinterest</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Pinterest"/>
+
+                    <h5 class="component_sec_title">Quara</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Quora"/>
+
+                    <h5 class="component_sec_title">Youtube</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Youtube"/>
+
+                     
+                    <h5 class="component_sec_title">Behance</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Behance"/>
+
+                    <h5 class="component_sec_title">Github</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Github"/>
+
+                    <h5 class="component_sec_title">Soundcloud </h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Soundcloud"/>
+
+                    <h5 class="component_sec_title">Foursquare  </h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Foursquare"/>
+
+                    <h5 class="component_sec_title">Tumblr  </h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Tumblr"/>
+
+                     <h5 class="component_sec_title">Twitter Screen Name</h5>
+                    <input type="text" class="info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.TwitterScreenName"/>
+
+
+                    <button type="button" class="btn btn-default save_btn" ng-click="profileCtrl.updateSocialMedia()">Save</button>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="container-fluid">
+                    <h3 class="component_header">Update Location</h3>
+                    <h4 class="location_city">New Cairo, Egypt</h4>
+                    <div class="map_container" id="map">
+                    </div>
+                    <button type="button" class="btn btn-default browse_btn loc_btn">Update Location</button>
+                    <button type="button" class="btn btn-default save_btn">Save</button>
+
+                </div>
+            </div>
+
+</div>

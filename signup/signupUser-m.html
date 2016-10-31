@@ -1,0 +1,52 @@
+<ion-view title="Signup User" id="page5">
+    <ion-content padding="true" class="has-header">
+        <!--<div id="signupUser-button-bar2" class="button-bar">
+            <button id="signupUser-button6" class="button button-positive  button-block">User</button>
+            <a ui-sref="signupOrginzation" id="signupUser-button7" class="button button-positive  button-block">Orgnization</a>
+        </div>-->
+        <form id="signupUser-form2" class="list">
+            <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
+                <!--<i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>-->
+                <img src="assets/img/logo.png" alt="">
+            </div>
+            <div id="signupUser-markdown2" style="color:#000000;font-size:19px;text-align:center;">
+                <p>Signup By</p>
+            </div>
+            <div id="signupUser-button-bar3" class="button-bar">
+                <button ng-click="signupUserCtrl.loginFacebook()" id="login-button20" class="button button-positive  button-block icon ion-social-facebook-outline">Facebook</button>
+                <button ng-click="signupUserCtrl.loginGoogle()" id="login-button22" class="button button-assertive  button-block icon ion-social-googleplus-outline">Google</button>
+            </div>
+            <div id="signupUser-markdown1" style="color:#000000;text-align:center;">
+                <p>OR </p>
+            </div>
+            <ion-list id="signupUser-list2">
+                <label class="item item-input" id="signupUser-input4">
+                    <span class="input-label">First Name</span>
+                    <input ng-model="signupUserCtrl.user.fisrtName" type="text" placeholder="">
+                </label>
+                <label class="item item-input" id="signupUser-input4">
+                    <span class="input-label">Last Name</span>
+                    <input ng-model="signupUserCtrl.user.lastName" type="text" placeholder="">
+                </label>
+                <label class="item item-input" id="signupUser-input5">
+                    <span class="input-label">Email</span>
+                    <input ng-model="signupUserCtrl.user.email" type="text" placeholder="">
+                </label>
+                <label class="item item-input" id="signupUser-input7">
+                    <span class="input-label">Password</span>
+                    <input ng-model="signupUserCtrl.user.password" type="password" placeholder="">
+                </label>
+                <label class="item item-input" id="signupUser-input6">
+                    <span class="input-label">Confirm Password</span>
+                    <input ng-model="signupUserCtrl.user.confirmPassword" type="password" placeholder="">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <div ng-if="signupUserCtrl.error" class="alert alert-danger">
+                {{ signupUserCtrl.errorMessage }}
+            </div>
+            <button ng-click="signupUserCtrl.registerUser()" id="signupUser-button5" class="button button-stable  button-block">Sign up</button>
+            <a href="#/signupOrginzation" id="login-button19" class="button button-positive  button-block button-clear">Or create an Orgnization account</a>
+        </form>
+    </ion-content>
+</ion-view>

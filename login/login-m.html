@@ -1,0 +1,40 @@
+<ion-view title="Login" id="page6">
+    <ion-content padding="true" class="has-header">
+        <form id="login-form3" class="list">
+            <div>
+                <!--<i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>-->
+                <img src="assets/img/logo.png" alt="">
+            </div>
+            <div id="login-markdown5" style="color:#000000;text-align:center;">
+                <p>Signin by</p>
+            </div>
+            <div id="login-button-bar6" class="button-bar">
+
+                <button ng-click="loginCtrl.loginFacebook()" id="login-button20" class="button button-positive  button-block icon ion-social-facebook-outline">Facebook</button>
+                <button ng-click="loginCtrl.loginGoogle()" id="login-button22" class="button button-assertive  button-block icon ion-social-googleplus-outline">Google</button>
+            </div>
+
+
+            <div id="login-markdown6" style="color:#000000;text-align:center;">
+                <p>Or</p>
+            </div>
+            <ion-list id="login-list3">
+                <label class="item item-input" id="login-input8">
+                    <span class="input-label">Username</span>
+                    <input ng-model="loginCtrl.email" type="text" placeholder="">
+                </label>
+                <label class="item item-input" id="login-input9">
+                    <span class="input-label">Password</span>
+                    <input ng-model="loginCtrl.password" type="password" placeholder="">
+                </label>
+                <ion-checkbox ng-model="loginCtrl.rememberMe">Remember Me</ion-checkbox>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <div ng-if="loginCtrl.error" class="alert alert-danger">
+                {{ loginCtrl.errorMessage }}
+            </div>
+            <button id="login-button18" ng-click="loginCtrl.login()"  class="button button-stable  button-block">Log in</button>
+            <a href="#/signupuser"  id="login-button19" class="button button-positive  button-block button-clear">Or create an account</a>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,153 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12">
+            <form>
+                <div class="col-xs-12 info_input">
+                    <h3 class="component_header"> {{'Update Information' | translate}}</h3>
+                </div>
+                <div class="col-xs-6 info_input">
+                    <h5 class="component_sec_title">{{'First name' | translate}}</h5>
+                    <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.FirstName">
+                </div>
+                <div class="col-xs-6 info_input">
+                    <h5 class="component_sec_title">{{'Last name' | translate}}</h5>
+                    <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.LastName">
+                </div>
+                <div class="col-xs-12 info_input">
+                    <h5 class="component_sec_title"> {{'Birth Date' | translate}}</h5>
+                    <input type="date" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.Age">
+                </div>
+                <div class="col-xs-12">
+                    <h3 class="component_header"> {{'Update Biography' | translate}}</h3>
+                </div>
+                <div class="col-xs-12 info_input">
+                    <div class="info_input">
+                        <textarea class="form-control" rows="3" ng-model="profileCtrl.loginUser.About"></textarea>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <a type="button" class="submit-button edit-profile-button mr-tp-10" ng-click="profileCtrl.updateInfo()">{{'Save' | translate}}</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-2 col-sm-3 col-xs-12">
+            <form>
+                <div class="profile_pic_div">
+                    <h3 class="component_header photo_title">{{'Change Photo' | translate}}</h3>
+                    <div class="photo_container">
+                        <img ng-src='{{profileCtrl.profilePic}}' class="img-responsive" />
+                    </div>
+                </div>
+                <a type="button" class="submit-button edit-profile-button mr-tp-10">{{'Save' | translate}}</a>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-4 col-xs-12">
+            <form>
+                <h3 class="component_header">  {{'Update Interest' | translate}}</h3>
+                <h5 class="component_header">  {{'Add another interest' | translate}}</h5>
+                <select class="info_txt_box interest_select">
+                    <option>{{'Choose from below' | translate}}.. </option>
+                    <option> {{'Art' | translate}}</option>
+                    <option>{{'Music' | translate}}</option>
+                </select>
+                <div class="interest">
+                    <div class="tag">
+                        <span class="tag_name">  {{'Photography' | translate}}</span>
+                        <a href="javascript:void(0)" class="close_tag">X</a>
+                    </div>
+                    <textarea class="form-control" rows="3">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                </div>
+                <div class="interest">
+                    <div class="tag">
+                        <span class="tag_name">  {{'Parenting' | translate}}</span>
+                        <a href="javascript:void(0)" class="close_tag">X</a>
+                    </div>
+                    <textarea class="form-control" rows="3">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                </div>
+                <div class="interest">
+                    <div class="tag">
+                        <span class="tag_name">  {{'Catering' | translate}}</span>
+                        <a href="javascript:void(0)" class="close_tag">X</a>
+                    </div>
+                    <textarea class="form-control" rows="3">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                </div>
+                <div class="interest">
+                    <div class="tag">
+                        <span class="tag_name">  {{'Art' | translate}}</span>
+                        <a href="javascript:void(0)" class="close_tag">X</a>
+                    </div>
+                    <textarea class="form-control" rows="3">Am a designer who like to take challenges in different fields, Tried fashion designing for a while, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man & married to my love. Grew in Alexandria, living in Cairo, love catering and food, Used to play piano. Have an obsession for animals specially dogs. Mother of young man.</textarea>
+                </div>
+                <a type="button" class="submit-button edit-profile-button mr-tp-10">{{'Save' | translate}}</a>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <form>
+                <h3 class="component_header">   {{'Update Work' | translate}} &amp;  {{'Education' | translate}}</h3>
+                <h5 class="component_sec_title">  {{'Work' | translate}}</h5>
+                <textarea class="form-control" rows="3" ng-model="profileCtrl.loginUser.Work" ng-maxlength=30>{{ profileCtrl.loginUser.Work }}</textarea>
+                <span class="hint_txt">  {{'max 30 characters' | translate}}</span>
+                <h5 class="component_sec_title">{{'Education' | translate}}</h5>
+                <textarea class="form-control" rows="3" ng-model="profileCtrl.loginUser.Education" ng-maxlength=30>{{ profileCtrl.loginUser.Education }}</textarea>
+                <span class="hint_txt">{{'max 30 characters' | translate}}</span>
+                <h3 class="component_header">  {{'Update Phone' | translate}}</h3>
+                <h5 class="component_sec_title">  {{'Phone' | translate}}</h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.Phone" ng-maxlength=30 />
+                <span class="hint_txt">{{'max 30 characters' | translate}}</span>
+                <br />
+                <input type="checkbox" id="c1" ng-model="profileCtrl.loginUser.PhoneViewable" />
+                <label for="c1"><span></span> {{'Show mobile by request' | translate}}</label>
+                <a type="button" class="submit-button edit-profile-button mr-tp-10" ng-click="profileCtrl.updateWorkAndEducation()">  {{'Save' | translate}}</a>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12">
+            <form>
+                <h3 class="component_header">  {{'Update Social Media' | translate}}</h3>
+                <h5 class="component_sec_title">Blog  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Blog" />
+                <h5 class="component_sec_title">About Me  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.AboutMe " />
+                <h5 class="component_sec_title">Instgram  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Instagram" />
+                <h5 class="component_sec_title">Pinterest  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Pinterest" />
+                <h5 class="component_sec_title">Quara  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Quora" />
+                <h5 class="component_sec_title">Youtube  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Youtube" />
+                <h5 class="component_sec_title">Behance  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Behance" />
+                <h5 class="component_sec_title">Github  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Github" />
+                <h5 class="component_sec_title">Soundcloud  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Soundcloud" />
+                <h5 class="component_sec_title">Foursquare   </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Foursquare" />
+                <h5 class="component_sec_title">Tumblr  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.Tumblr" />
+                <h5 class="component_sec_title">Twitter Screen Name  </h5>
+                <input type="text" class="form-control info_txt_box" ng-model="profileCtrl.loginUser.UserLinks.TwitterScreenName" />
+                <a type="button" class="submit-button edit-profile-button mr-tp-10" ng-click="profileCtrl.updateSocialMedia()">{{'Save' | translate}}</a>
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12">
+            <form>
+                <h3 class="component_header"> {{'Update Location ' | translate}}</h3>
+                <h4 class="location_city">  {{'New Cairo Egypt' | translate}}</h4>
+                <div class="map_container" id="map">
+                </div>
+                <a type="button" class="submit-button edit-profile-button mr-tp-10">  {{'Update Location' | translate}}</a>
+                <a type="button" class="submit-button edit-profile-button mr-tp-10">  {{'Save' | translate}}</a>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="notification not-sucess" ng-if=profileCtrl.showMessage>
+    <h4>
+        Success
+    </h4>
+    <p>
+        Your Updates Is Saved Successfully</p>
+</div>
